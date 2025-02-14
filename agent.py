@@ -24,9 +24,10 @@ def ai_planner():
     question = input("Where do you want to go ? : ")
 
     # Find a path to the Dining Room.
+    
+    # response = client.client.beta.assistants.create
     response = client.chat.completions.create(
         model="gpt-4o",
-        # model="o3-mini",
         messages=[
             {
                 "role": "user",
@@ -42,17 +43,25 @@ def ai_planner():
                 ],
             },
         ],
+       temperature=0
     )
 
-    response_str = response.choices[0].message.content
+    # response_str = response.choices[0].message.content
     
     lst = response.choices[0].message.content.split("\n")[1:-1]
     mystr = ''
     for i in lst:
         mystr = mystr+i
-    response_dict = ast.literal_eval(mystr)
+    
+    # print(mystr)
+    
+    # response_dict = ast.literal_eval(mystr)
+    # response_content = response.choices[0].message.content
+    
+    # print(response_ceontent)
+    response_dict=json.loads(mystr)
 
     return response_dict
 
 if __name__ == "__main__":
-    ai_planner()
+    print(ai_planner())

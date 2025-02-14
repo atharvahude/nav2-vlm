@@ -9,11 +9,11 @@ The map coordinates are already plotted for you on the image.
 
 # Steps
 
-1. Load and examine the SLAM-generated map.
+1. Understand the map. The axies of the map have pixel coordinates on them. Understand  floorplan by looking at the outer wall structure and then at the corresponding axies of the map.
 
 2. After you look at the map and have a spatial understanding of the rooms. Estimate the pixel coordinates of the goal. 
 
-3. Retun the goal coordinate as a list of python tuple. Example: [(x,y)] for single goal. [(x1,y1),(x2,2)] if the goal requires multiple waypoins. 
+3. Retun the goal coordinate as a list. Example: [[x,y]] for single goal. [[x1,y1],[x2,y2]] if the goal requires multiple waypoins. 
 
 # IMPORTANT NOTES
 
@@ -27,7 +27,7 @@ Your goal coordinate will be fed to a global planner of Ros2 Nav2 stack so it al
 
 # Output Format
 {
-    'goal': [(x1,y1),(x2,y2),...],
+    'goal': [[x1,y1],[x2,y2],...],
     'reasoning': 'reasoning',
 }
 
