@@ -1,0 +1,14 @@
+Entry-Hall Door: 58.8,173.6
+Hall-Dining Door: 105,148.65
+Dining-Kitchen Door: 132,102.4
+Hall-Kitchen Door : 87.6,94
+Bedroom-Hall  Door: 84.6,75.4
+
+
+Rviz checkpoints
+
+Entry-Hall Door: 2.94 1.22 (58.8,173.6)
+Hall-Dining Door: 5.25 2.47 (105,148.65)
+Dining-Kitchen Door: 6.6 4.78 (132,102.4)
+Hall-Kitchen Door : 4.38, 5.2 (87.6,94)
+Bedroom-Hall  Door: 4.23, 6.13 (84.6,75.4)

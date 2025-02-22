@@ -61,7 +61,12 @@ def main():
     for i in waypoint_coordinates:
         x_coord = i[0]/20
         y_coord = (198-i[1])/20
+
+        print(x_coord,'\t',y_coord,'\n')
+
         waypoints.append(create_pose_stamped(navigiator,x_coord,y_coord,0))
+
+    
 
     navigiator.followWaypoints(waypoints)
 
